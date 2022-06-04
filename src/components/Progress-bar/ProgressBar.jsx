@@ -2,7 +2,21 @@ import React from 'react'
 
 function ProgressBar() {
   return (
-    <div>ProgressBar</div>
+    <div className="progress">
+    <div className="boxes">
+      <div className="box"></div>
+      <div className="box"></div>
+      <div className="box"></div>
+      <div className="box"></div>
+      <div className="box"></div>
+      <div className="box"></div>
+      <div className="box"></div>
+      <div className="box"></div>
+      <div className="box"></div>
+      <div className="box"></div>
+    </div>
+    <div className="progress-inner"></div>
+  </div>
   )
 }
 

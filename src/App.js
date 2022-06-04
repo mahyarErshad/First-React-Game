@@ -1,4 +1,5 @@
 import React from 'react';
+import ProgressBar from './components/Progress-bar/ProgressBar';
 
 function App() {
   return (
@@ -11,22 +12,7 @@ function App() {
     <button>Submit</button>
 
   <p className="status">You need <span className="points-needed">10</span> more points, and are allowed to make <span className="mistakes-allowed">2</span> more mistakes.</p>
-
-  <div className="progress">
-    <div className="boxes">
-      <div className="box"></div>
-      <div className="box"></div>
-      <div className="box"></div>
-      <div className="box"></div>
-      <div className="box"></div>
-      <div className="box"></div>
-      <div className="box"></div>
-      <div className="box"></div>
-      <div className="box"></div>
-      <div className="box"></div>
-    </div>
-    <div className="progress-inner"></div>
-  </div>
+    <ProgressBar />
 
 </div>
 
