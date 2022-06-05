@@ -4,11 +4,12 @@ import ProgressBar from './components/Progress-bar/ProgressBar';
 import Result from './components/Result/Result';
 
 function App() {
+  const [score, setScore] = React.useState(0);
 
   return (
     <> 
-    <Head/>
-    <ProgressBar />
+    <Head score={score} setScore={setScore}/>
+    <ProgressBar score={score} />
     <Result/>
     </>
   );

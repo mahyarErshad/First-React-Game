@@ -1,7 +1,6 @@
 import React from 'react'
 
-function Head() {
-  const [score, setScroe] = React.useState(0);
+function Head({score , setScore}) {
   const [mistakes, setMistakes] = React.useState(0);
   const [currentProblem , setCurrentProblem] = React.useState(generateProblem());
   const [userAnswer , setUserAnswer] = React.useState('');
@@ -27,7 +26,7 @@ function Head() {
       default: break;
     }
     if (correctAnswer === parseInt(userAnswer)){
-      setScroe(score + 1);
+      setScore(score + 1);
       setCurrentProblem(generateProblem());
       setUserAnswer('');
     } else{

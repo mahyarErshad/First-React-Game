@@ -1,6 +1,6 @@
 import React from 'react'
 
-function ProgressBar() {
+function ProgressBar({score}) {
   return (
     <div className="progress">
     <div className="boxes">
@@ -15,7 +15,7 @@ function ProgressBar() {
       <div className="box"></div>
       <div className="box"></div>
     </div>
-    <div className="progress-inner"></div>
+    <div className="progress-inner" style={{transform: `scaleX(${score / 10})`}}></div>
   </div>
   )
 }
