@@ -1,7 +1,6 @@
 import React from 'react'
 
-function Head({score , setScore}) {
-  const [mistakes, setMistakes] = React.useState(0);
+function Head({score , setScore, mistakes, setMistakes}) {
   const [currentProblem , setCurrentProblem] = React.useState(generateProblem());
   const [userAnswer , setUserAnswer] = React.useState('');
 

@@ -5,12 +5,13 @@ import Result from './components/Result/Result';
 
 function App() {
   const [score, setScore] = React.useState(0);
+  const [mistakes, setMistakes] = React.useState(0);
 
   return (
     <> 
-    <Head score={score} setScore={setScore}/>
+    <Head score={score} setScore={setScore} mistakes={mistakes} setMistakes={setMistakes}/>
     <ProgressBar score={score} />
-    <Result/>
+    <Result score={score} mistakes={mistakes}/>
     </>
   );
 }
