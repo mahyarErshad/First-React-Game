@@ -12,7 +12,7 @@ function Head({score , setScore, mistakes, setMistakes}) {
     return {
       numberOne: generateNumber(10),
       numberTwo: generateNumber(10),
-      operator: ['+', '-', 'x'][generateNumber(2)]
+      operator: ['+', '-', 'x' , '÷'][generateNumber(2)]
     }
   }
   function handleSubmit(e){
@@ -22,6 +22,7 @@ function Head({score , setScore, mistakes, setMistakes}) {
       case '+': correctAnswer = currentProblem.numberOne + currentProblem.numberTwo; break;
       case '-': correctAnswer = currentProblem.numberOne - currentProblem.numberTwo; break;
       case 'x': correctAnswer = currentProblem.numberOne * currentProblem.numberTwo; break;
+      case '÷': correctAnswer = currentProblem.numberOne / currentProblem.numberTwo; break;
       default: break;
     }
     if (correctAnswer === parseInt(userAnswer)){
@@ -37,7 +38,7 @@ function Head({score , setScore, mistakes, setMistakes}) {
 
   return (
     <>
-    <div className="main-ui">
+    <div className={"main-ui" + (mistakes === 3 || score === 10 ? " blurred" : "")}>
     <p className="problem">{currentProblem.numberOne} {currentProblem.operator} {currentProblem.numberTwo}</p>
     <form onSubmit={handleSubmit} action="" className="our-form">
       <input value={userAnswer} onChange={(e) => setUserAnswer(e.target.value)} type="text" className="our-field" autoComplete="off"/>
