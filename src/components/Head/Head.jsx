@@ -34,6 +34,12 @@ function Head({score , setScore, mistakes, setMistakes}) {
       setUserAnswer('');
     }
   }
+  function resetGame (){
+    setScore(0);
+    setMistakes(0);
+    setCurrentProblem(generateProblem());
+    setUserAnswer('');
+  }
   
 
   return (
@@ -46,6 +52,12 @@ function Head({score , setScore, mistakes, setMistakes}) {
       </form>
     <p className="status">You need {10 - score} more points, and are allowed to make {2 - mistakes} more mistakes.</p>
     </div>
+    <div className={"overlay" + (score === 10 || mistakes === 3 ? " overlay--visible" : "")}>
+  <div className="overlay-inner">
+    <p className="end-message">{score === 10 ? "Well done. You won!" : "Sorry you lost the game!"}</p>
+    <button onClick={resetGame} className="reset-button">Start Over</button>
+  </div>
+</div>
     </>
   )
 }
