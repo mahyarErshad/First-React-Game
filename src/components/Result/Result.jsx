@@ -1,6 +1,6 @@
 import React from 'react'
 
-function index() {
+function Result() {
   return (
       <>
     <div className="overlay">
@@ -13,4 +13,4 @@ function index() {
   )
 }
 
-export default index
+export default Result
